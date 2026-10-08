@@ -32,18 +32,35 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const sections = ["home", "work", "projects", "contact"].map((id) => document.getElementById(id));
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries.find((entry) => entry.isIntersecting);
-      if (visible) setActiveSection(visible.target.id);
-    }, { rootMargin: "-25% 0px -65% 0px" });
+    const sections = ["home", "work", "projects", "contact"].map((id) =>
+      document.getElementById(id),
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-25% 0px -65% 0px" },
+    );
     sections.forEach((section) => section && observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
-  return <>
-    <div className="grain" aria-hidden="true" />
-    <Header menuOpen={menuOpen} navHidden={navHidden} activeSection={activeSection} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} />
-    <main><Introduction /><Work /><Projects /><Contact /></main>
-  </>;
+  return (
+    <>
+      <Header
+        menuOpen={menuOpen}
+        navHidden={navHidden}
+        activeSection={activeSection}
+        onMenuToggle={() => setMenuOpen(!menuOpen)}
+        onCloseMenu={() => setMenuOpen(false)}
+      />
+      <main>
+        <Introduction />
+        <Work />
+        <Projects />
+        <Contact />
+      </main>
+    </>
+  );
 }
