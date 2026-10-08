@@ -11,13 +11,11 @@ import Footer from "./components/Footer";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") return "light";
     const storedTheme = window.localStorage.getItem("portfolio-theme");
-    const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    setTheme(storedTheme || preferredTheme);
-  }, []);
+    return storedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  });
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -36,7 +34,7 @@ export default function App() {
 
   return <>
     <div className="grain" aria-hidden="true" />
-    <Header menuOpen={menuOpen} activeSection={activeSection} theme={theme} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} onThemeToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
+    <Header menuOpen={menuOpen} activeSection={activeSection} theme={theme} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} onThemeToggle={() => setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark")} />
     <main><Hero /><section className="statement section"><div className="eyebrow">A little context</div><p className="statement-copy">The best products sit at the intersection of <i>clarity</i>, curiosity, and craft. That&apos;s where I like to work.</p><div className="statement-meta"><span>Based in the details</span><span>Open to meaningful opportunities</span></div></section><Work /><Approach /><Contact /></main>
     <Footer />
   </>;
