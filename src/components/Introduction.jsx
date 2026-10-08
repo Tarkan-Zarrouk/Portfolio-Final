@@ -4,8 +4,7 @@ export default function Introduction() {
   return (
     <section className="hero section" id="home">
       <div className="hero-intro reveal">
-        <div className="hero-kicker"><span className="pulse" /> Software developer <span className="hero-kicker-divider">/</span> Toronto, Canada</div>
-        <h1>Hi, I&apos;m <span>Tarkan.</span></h1>
+        <h1>Hi, I&apos;m Tarkan. <span aria-hidden="true">👋</span></h1>
         <p className="hero-lede">I build reliable, well-considered software for people and teams. I care about clear thinking, useful interfaces, and doing the work properly.</p>
         <div className="hero-actions">
           <a className="button button-lime" href="#work">View my work <ArrowDownRight size={17} /></a>
