@@ -12,9 +12,9 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") return "light";
+    if (typeof window === "undefined") return "dark";
     const storedTheme = window.localStorage.getItem("portfolio-theme");
-    return storedTheme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    return storedTheme || "dark";
   });
 
   useEffect(() => {
