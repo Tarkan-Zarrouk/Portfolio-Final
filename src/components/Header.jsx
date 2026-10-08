@@ -15,7 +15,7 @@ export default function Header({ menuOpen, activeSection, theme, onMenuToggle, o
         </button>
       </div>
       <nav className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
-        {["home", "work", "approach", "contact"].map((section) => (
+        {["home", "work", "projects", "contact"].map((section) => (
           <a className={activeSection === section ? "active" : ""} href={`#${section}`} key={section} onClick={onCloseMenu}>{section}</a>
         ))}
       </nav>

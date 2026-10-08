@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
-import Approach from "./components/Approach";
+import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -23,7 +23,7 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
-    const sections = ["home", "work", "approach", "contact"].map((id) => document.getElementById(id));
+    const sections = ["home", "work", "projects", "contact"].map((id) => document.getElementById(id));
     const observer = new IntersectionObserver((entries) => {
       const visible = entries.find((entry) => entry.isIntersecting);
       if (visible) setActiveSection(visible.target.id);
@@ -35,7 +35,7 @@ export default function App() {
   return <>
     <div className="grain" aria-hidden="true" />
     <Header menuOpen={menuOpen} activeSection={activeSection} theme={theme} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} onThemeToggle={() => setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark")} />
-    <main><Hero /><section className="statement section"><div className="eyebrow">A little context</div><p className="statement-copy">The best products sit at the intersection of <i>clarity</i>, curiosity, and craft. That&apos;s where I like to work.</p><div className="statement-meta"><span>Based in the details</span><span>Open to meaningful opportunities</span></div></section><Work /><Approach /><Contact /></main>
+    <main><Hero /><section className="statement section"><div className="eyebrow">A little context</div><p className="statement-copy">The best products sit at the intersection of <i>clarity</i>, curiosity, and craft. That&apos;s where I like to work.</p><div className="statement-meta"><span>Based in the details</span><span>Open to meaningful opportunities</span></div></section><Work /><Projects /><Contact /></main>
     <Footer />
   </>;
 }
