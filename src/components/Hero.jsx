@@ -25,7 +25,6 @@ export default function Hero() {
         <div className="profile-facts"><span>02</span><span>Detail oriented</span></div>
         <div className="profile-facts"><span>03</span><span>Always learning</span></div>
       </div>
-      <div className="hero-footer"><span className="scroll-line" /><span>01 / 04</span></div>
     </section>
   );
 }
