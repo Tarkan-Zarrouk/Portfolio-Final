@@ -1,4 +1,4 @@
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header({ menuOpen, navHidden, activeSection, onMenuToggle, onCloseMenu }) {
   return (
@@ -16,7 +16,6 @@ export default function Header({ menuOpen, navHidden, activeSection, onMenuToggl
           return <a className={activeSection === section ? "active" : ""} href={`#${section}`} key={section} onClick={onCloseMenu}>{label}</a>;
         })}
       </nav>
-      <a className="header-availability" href="#contact">Let&apos;s work together <ArrowUpRight size={14} /></a>
     </header>
   );
 }
