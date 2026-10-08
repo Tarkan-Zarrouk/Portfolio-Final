@@ -11,16 +11,6 @@ import Footer from "./components/Footer";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") return "dark";
-    const storedTheme = window.localStorage.getItem("portfolio-theme");
-    return storedTheme || "dark";
-  });
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-    window.localStorage.setItem("portfolio-theme", theme);
-  }, [theme]);
 
   useEffect(() => {
     const sections = ["home", "work", "projects", "contact"].map((id) => document.getElementById(id));
@@ -34,7 +24,7 @@ export default function App() {
 
   return <>
     <div className="grain" aria-hidden="true" />
-    <Header menuOpen={menuOpen} activeSection={activeSection} theme={theme} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} onThemeToggle={() => setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark")} />
+    <Header menuOpen={menuOpen} activeSection={activeSection} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} />
     <main><Hero /><Work /><Projects /><Contact /></main>
     <Footer />
   </>;
