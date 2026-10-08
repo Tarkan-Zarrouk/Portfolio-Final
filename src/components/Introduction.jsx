@@ -19,9 +19,6 @@ export default function Introduction() {
       </div>
       <div className="hero-profile reveal delay-1">
         <div className="profile-photo"><img src="/Photo.png" alt="Tarkan Zarrouk" /></div>
-        <div className="profile-facts"><span>01</span><span>Product-minded</span></div>
-        <div className="profile-facts"><span>02</span><span>Detail oriented</span></div>
-        <div className="profile-facts"><span>03</span><span>Always learning</span></div>
       </div>
     </section>
   );
