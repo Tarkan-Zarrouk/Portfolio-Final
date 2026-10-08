@@ -4,21 +4,12 @@ import { useEffect, useState } from "react";
 import {
   ArrowDownRight,
   ArrowUpRight,
-  BrainCircuit,
   Check,
   Github,
   Linkedin,
   Menu,
-  MoveUpRight,
-  Sparkles,
   X,
 } from "lucide-react";
-
-const socialMediaFeatures = [
-  ["01", "Intentional feeds", "A calmer content hierarchy that puts people and their communities first."],
-  ["02", "Useful interactions", "Small, considered feedback loops that make the product feel responsive and human."],
-  ["03", "Built to scale", "A component-led interface designed to stay coherent as the product grows."],
-];
 
 const mlProjects = [
   {
@@ -38,7 +29,7 @@ const mlProjects = [
   {
     number: "03",
     category: "Machine learning",
-    title: "Human-centered AI",
+    title: "Applied learning",
     copy: "Keeping the person in the loop with clear outputs, honest constraints, and interfaces that build trust.",
     tags: ["Product", "Iteration"],
   },
@@ -87,20 +78,21 @@ export default function App() {
       <main>
         <section className="hero section" id="home">
           <div className="hero-content reveal">
-            <div className="eyebrow"><span className="pulse" /> Software developer · ML curious</div>
-            <h1>I build digital<br /><i>experiences</i> with<br />a point of view.</h1>
+            <div className="eyebrow"><span className="pulse" /> Software developer · New York</div>
+            <h1>I build digital<br /><i>experiences</i> people<br />can believe in.</h1>
             <p className="hero-lede">I&apos;m Tarkan — a developer focused on making complex ideas feel clear, useful, and worth coming back to.</p>
             <div className="hero-actions">
               <a className="button button-lime" href="#work">Explore selected work <ArrowDownRight size={17} /></a>
               <a className="underlined-link" href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">Connect on LinkedIn <ArrowUpRight size={14} /></a>
             </div>
           </div>
-          <div className="hero-orbit reveal delay-1" aria-hidden="true">
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="orbit-core"><BrainCircuit size={41} strokeWidth={1.2} /><span>Curious<br />by default</span></div>
-            <span className="orbit-label label-top">Design<br />× logic</span>
-            <span className="orbit-label label-bottom">Build. Learn.<br />Refine.</span>
+          <div className="hero-profile reveal delay-1">
+            <div className="profile-photo">TZ</div>
+            <div className="profile-caption"><span>Currently</span><strong>Building thoughtful<br />software products</strong></div>
+            <div className="profile-rule" />
+            <div className="profile-facts"><span>01</span><span>Product-minded</span></div>
+            <div className="profile-facts"><span>02</span><span>Detail oriented</span></div>
+            <div className="profile-facts"><span>03</span><span>Always learning</span></div>
           </div>
           <div className="hero-footer">
             <span>Scroll to explore</span>
@@ -122,16 +114,16 @@ export default function App() {
               <div className="window-chrome"><span /><span /><span /><small>pulse / home</small></div>
               <div className="social-ui">
                 <aside><strong>◉</strong><span className="side-active" /><span /><span /><span /><small>TZ</small></aside>
-                <div className="social-feed"><div className="feed-top"><b>Good morning, Tarkan</b><span>＋</span></div><div className="story-list"><b>TZ</b><span>AM</span><span>JK</span><span>+</span></div><div className="post-card"><div className="post-head"><span className="avatar">AM</span><span><b>Alex Morgan</b><small>12 min ago</small></span><i>•••</i></div><div className="post-photo"><Sparkles size={20} /></div><div className="post-footer">♡ &nbsp; ◌ &nbsp; ♧ <small>1,248 reactions</small></div></div></div>
+                <div className="social-feed"><div className="feed-top"><b>Good morning, Tarkan</b><span>＋</span></div><div className="story-list"><b>TZ</b><span>AM</span><span>JK</span><span>+</span></div><div className="post-card"><div className="post-head"><span className="avatar">AM</span><span><b>Alex Morgan</b><small>12 min ago</small></span><i>•••</i></div>                <div className="post-photo"><span>shared moments</span></div><div className="post-footer">♡ &nbsp; ◌ &nbsp; ♧ <small>1,248 reactions</small></div></div></div>
               </div>
-              <span className="art-note note-one">made for humans <Sparkles size={12} /></span>
+                <span className="art-note note-one">made for humans</span>
               <span className="art-note note-two">social / 2024</span>
             </div>
             <div className="featured-copy"><div className="project-kicker">Featured project / 01</div><h3>Social<br /><i>Media App</i></h3><p>A community-first social experience designed around meaningful sharing instead of endless noise. I explored how information hierarchy and small interaction details can make a platform feel more human.</p><div className="tag-list"><span>Product thinking</span><span>Responsive UI</span><span>Interaction design</span></div><a className="button button-dark" href="https://github.com/Tarkan-Zarrouk" target="_blank" rel="noreferrer">View project on GitHub <ArrowUpRight size={15} /></a></div>
           </article>
 
           <div className="ml-heading reveal"><div className="eyebrow">02 / Machine learning</div><h3>Questions become<br /><i>better with data.</i></h3><p>A collection of learning-driven work from my journey in machine learning — grounded in experimentation, iteration, and making technical ideas useful.</p></div>
-          <div className="ml-grid">{mlProjects.map((project) => <article className="ml-card reveal" key={project.number}><div className="ml-card-top"><span>{project.number}</span><BrainCircuit size={20} /></div><div><div className="project-kicker">{project.category}</div><h4>{project.title}</h4><p>{project.copy}</p></div><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="card-arrow" href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">Learn more <ArrowUpRight size={14} /></a></article>)}</div>
+          <div className="ml-grid">{mlProjects.map((project) => <article className="ml-card reveal" key={project.number}><div className="ml-card-top"><span>{project.number}</span><span className="card-index">/ 03</span></div><div><div className="project-kicker">{project.category}</div><h4>{project.title}</h4><p>{project.copy}</p></div><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="card-arrow" href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">Learn more <ArrowUpRight size={14} /></a></article>)}</div>
         </section>
 
         <section className="approach section" id="approach">
