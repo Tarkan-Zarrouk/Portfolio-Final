@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 const projects = [
   {
     title: "Social Media Application",
@@ -58,7 +56,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="projects section" id="projects">
-      <div className="project-grid">{projects.map((project) => <a className="project-tile reveal" href={project.href} target="_blank" rel="noreferrer" key={project.title}><div className="project-tile-top"><span>{project.category}</span></div><h3>{project.title}</h3><ul className="project-bullets">{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><span className="card-arrow">View project <ArrowUpRight size={14} /></span></a>)}</div>
+      <div className="project-grid">{projects.map((project) => <a className="project-tile reveal" href={project.href} target="_blank" rel="noreferrer" key={project.title}><div className="project-tile-top"><span>{project.category}</span></div><h3>{project.title}</h3><ul className="project-bullets">{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></a>)}</div>
     </section>
   );
 }
