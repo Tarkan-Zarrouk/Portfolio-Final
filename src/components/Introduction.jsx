@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight, Download, Mail } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
 
 export default function Introduction() {
   return (
@@ -13,7 +13,7 @@ export default function Introduction() {
         <div className="hero-links">
           <a href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
           <a href="https://github.com/Tarkan-Zarrouk" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} /></a>
-          <a href="mailto:tarkan.zarrouk@gmail.com">Email <Mail size={14} /></a>
+          <a href="mailto:tarkan.zarrouk@gmail.com">Email <ArrowUpRight size={14} /></a>
         </div>
       </div>
       <div className="hero-profile reveal delay-1">
