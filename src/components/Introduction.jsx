@@ -1,6 +1,6 @@
 import { ArrowDownRight, ArrowUpRight, Download, Mail } from "lucide-react";
 
-export default function Hero() {
+export default function Introduction() {
   return (
     <section className="hero section" id="home">
       <div className="hero-intro reveal">
