@@ -35,7 +35,7 @@ export default function App() {
   return <>
     <div className="grain" aria-hidden="true" />
     <Header menuOpen={menuOpen} activeSection={activeSection} theme={theme} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} onThemeToggle={() => setTheme((currentTheme) => currentTheme === "dark" ? "light" : "dark")} />
-    <main><Hero /><section className="statement section"><div className="eyebrow">A little context</div><p className="statement-copy">The best products sit at the intersection of <i>clarity</i>, curiosity, and craft. That&apos;s where I like to work.</p><div className="statement-meta"><span>Based in the details</span><span>Open to meaningful opportunities</span></div></section><Work /><Projects /><Contact /></main>
+    <main><Hero /><Work /><Projects /><Contact /></main>
     <Footer />
   </>;
 }
