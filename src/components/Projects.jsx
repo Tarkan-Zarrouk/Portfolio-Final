@@ -58,7 +58,6 @@ const projects = [
 export default function Projects() {
   return (
     <section className="projects section" id="projects">
-      <div className="section-heading reveal"><div><div className="eyebrow">Projects</div><h2>Projects</h2></div><p>Selected work across application development, computer vision, embedded systems, robotics, and open source.</p></div>
       <div className="project-grid">{projects.map((project) => <article className="project-tile reveal" key={project.title}><div className="project-tile-top"><span>{project.category}</span></div><h3>{project.title}</h3><ul className="project-bullets">{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul><div className="tag-list">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div><a className="card-arrow" href={project.href} target="_blank" rel="noreferrer">View project <ArrowUpRight size={14} /></a></article>)}</div>
     </section>
   );
