@@ -11,9 +11,9 @@ export default function Introduction() {
           <a className="underlined-link" href="/resume.pdf" target="_blank" rel="noreferrer">Resume <Download size={14} /></a>
         </div>
         <div className="hero-links">
-          <a href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
           <a href="https://github.com/Tarkan-Zarrouk" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} /></a>
-          <a href="mailto:tarkan.zarrouk@gmail.com">Email <ArrowUpRight size={14} /></a>
+          <a href="https://www.linkedin.com/in/tarkan-zarrouk/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} /></a>
+          <a href="mailto:tarkan.zarrouk@gmail.com">EMail <ArrowUpRight size={14} /></a>
         </div>
       </div>
       <div className="hero-profile reveal delay-1">
