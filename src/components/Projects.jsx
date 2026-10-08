@@ -1,3 +1,4 @@
+// stuff
 const projects = [
   {
     title: "Social Media Application",
@@ -46,7 +47,7 @@ const projects = [
     title: "Minecraft mod",
     category: "Open source / Java",
     bullets: [
-      "A quality-of-life Minecraft mod built to test ideas against a real codebase and make everyday play more useful.",
+      "After Minecraft stopped obfuscating their codebase, I dove into their Java Bytecode and decompiled it with mappings to improve readability and test my skills in making a mod that involves featuers I wished minecraft would integrate!",
     ],
     tags: ["Java", "Fabric", "Open source"],
     href: "https://github.com/Tarkan-Zarrouk/meow-client",
