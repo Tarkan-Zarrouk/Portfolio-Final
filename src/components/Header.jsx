@@ -1,8 +1,8 @@
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
-export default function Header({ menuOpen, activeSection, onMenuToggle, onCloseMenu }) {
+export default function Header({ menuOpen, navHidden, activeSection, onMenuToggle, onCloseMenu }) {
   return (
-    <header className="site-header">
+    <header className={`site-header${navHidden ? " nav-hidden" : ""}`}>
       <a className="brand" href="#home" onClick={onCloseMenu}>
         <span className="brand-mark">TZ</span>
         <span>Tarkan Zarrouk</span>

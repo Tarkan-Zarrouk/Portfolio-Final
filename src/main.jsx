@@ -11,6 +11,26 @@ import Footer from "./components/Footer";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [navHidden, setNavHidden] = useState(false);
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY <= 0) {
+        setNavHidden(false);
+      } else if (currentScrollY < previousScrollY) {
+        setNavHidden(true);
+      } else if (currentScrollY > previousScrollY) {
+        setNavHidden(false);
+      }
+      previousScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const sections = ["home", "work", "projects", "contact"].map((id) => document.getElementById(id));
@@ -24,7 +44,7 @@ export default function App() {
 
   return <>
     <div className="grain" aria-hidden="true" />
-    <Header menuOpen={menuOpen} activeSection={activeSection} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} />
+    <Header menuOpen={menuOpen} navHidden={navHidden} activeSection={activeSection} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} />
     <main><Introduction /><Work /><Projects /><Contact /></main>
     <Footer />
   </>;
