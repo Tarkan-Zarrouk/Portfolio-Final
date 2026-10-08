@@ -6,7 +6,6 @@ import Introduction from "./components/Introduction";
 import Work from "./components/Work";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +45,5 @@ export default function App() {
     <div className="grain" aria-hidden="true" />
     <Header menuOpen={menuOpen} navHidden={navHidden} activeSection={activeSection} onMenuToggle={() => setMenuOpen(!menuOpen)} onCloseMenu={() => setMenuOpen(false)} />
     <main><Introduction /><Work /><Projects /><Contact /></main>
-    <Footer />
   </>;
 }

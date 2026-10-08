@@ -11,9 +11,10 @@ export default function Header({ menuOpen, navHidden, activeSection, onMenuToggl
         {menuOpen ? <X size={20} /> : <Menu size={20} />}
       </button>
       <nav className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
-        {["home", "work", "projects", "contact"].map((section) => (
-          <a className={activeSection === section ? "active" : ""} href={`#${section}`} key={section} onClick={onCloseMenu}>{section}</a>
-        ))}
+        {["home", "work", "projects", "get in touch"].map((label) => {
+          const section = label === "get in touch" ? "contact" : label;
+          return <a className={activeSection === section ? "active" : ""} href={`#${section}`} key={section} onClick={onCloseMenu}>{label}</a>;
+        })}
       </nav>
       <a className="header-availability" href="#contact">Let&apos;s work together <ArrowUpRight size={14} /></a>
     </header>
