@@ -61,7 +61,7 @@ export default function Introduction() {
         <div className="h-[235px] overflow-hidden bg-gradient-to-br from-[#dbe4d7] to-[#b5c6b3]">
           <img
             className="block h-full w-full object-cover"
-            src="./Users/tarkanzarrouk/Desktop/Portfolio/public/Photo.png"
+            src="/photo.png"
             alt="Tarkan Zarrouk"
           />
         </div>
