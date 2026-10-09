@@ -50,7 +50,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="mx-auto max-w-[1280px] border-t border-line px-[42px] pb-[150px] pt-[145px] max-md:px-[22px] max-md:pb-[95px] max-md:pt-[90px]" id="projects">
+    <section
+      className="mx-auto max-w-[1280px] border-t border-line px-[42px] pb-[150px] pt-[145px] max-md:px-[22px] max-md:pb-[95px] max-md:pt-[90px]"
+      id="projects"
+    >
       <div className="grid grid-cols-2 gap-[15px] max-md:grid-cols-1">
         {projects.map((project) => (
           <a
