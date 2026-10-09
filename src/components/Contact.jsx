@@ -7,19 +7,14 @@ export default function Contact() {
       id="contact"
     >
       <div className="animate-rise">
-        <div className="text-[11px] font-semibold text-muted">Get in touch</div>
         <h2 className="my-[25px] text-[clamp(48px,6.7vw,86px)] font-bold leading-[0.94] tracking-[-0.09em]">
           Get in touch
         </h2>
         <p className="mb-[31px] max-w-[400px] text-sm leading-[1.8] text-muted">
-          For opportunities, questions, or a good problem to solve, reach out
-          through LinkedIn or email.
+          If you'd like to chat, feel free to shoot me a message throug here!
         </p>
       </div>
       <div className="pt-2 animate-rise [animation-delay:120ms] max-md:mt-[65px]">
-        <span className="mb-[22px] block text-[11px] text-muted">
-          Get in touch
-        </span>
         <a
           className="flex items-center gap-2.5 border-b border-line py-[15px] text-xs font-bold transition-all hover:pl-2"
           href="https://www.linkedin.com/in/tarkan-zarrouk/"

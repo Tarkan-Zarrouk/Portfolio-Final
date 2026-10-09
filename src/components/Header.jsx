@@ -13,16 +13,6 @@ export default function Header({
         navHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <a
-        className="flex items-center gap-2.5 text-xs font-extrabold"
-        href="#home"
-        onClick={onCloseMenu}
-      >
-        <span className="grid h-[30px] w-[30px] place-items-center rounded-full bg-lime text-[9px] tracking-[-0.08em] text-dark">
-          TZ
-        </span>
-        <span>Tarkan Zarrouk</span>
-      </a>
       <button
         className="ml-auto border-0 bg-transparent text-ink md:hidden"
         aria-label={menuOpen ? "Close menu" : "Open menu"}

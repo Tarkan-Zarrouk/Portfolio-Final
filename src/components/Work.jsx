@@ -5,7 +5,6 @@ export default function Work() {
       id="work"
     >
       <div className="mb-[54px] animate-rise">
-        <div className="text-[11px] font-semibold text-muted">Work</div>
         <h2 className="mt-[25px] text-[clamp(42px,5vw,65px)] font-bold leading-none tracking-[-0.08em]">
           Experience
         </h2>
@@ -21,9 +20,6 @@ export default function Work() {
               clear communication, and attention to detail matter.
             </p>
           </div>
-          <span className="pt-5 text-right text-[11px] text-muted max-md:pt-0 max-md:text-left">
-            Product / software
-          </span>
         </article>
         <article className="grid grid-cols-[1fr_180px] gap-7 border-b border-line py-[35px] transition-all hover:bg-lime/[0.12] hover:pl-[14px] max-md:grid-cols-1">
           <div>
@@ -35,9 +31,6 @@ export default function Work() {
               and hands-on technical projects.
             </p>
           </div>
-          <span className="pt-5 text-right text-[11px] text-muted max-md:pt-0 max-md:text-left">
-            Teaching / technology
-          </span>
         </article>
       </div>
     </section>
