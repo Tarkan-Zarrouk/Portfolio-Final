@@ -25,7 +25,7 @@ export default function Introduction() {
           </a>
           <a
             className="inline-flex items-center gap-2 border-b border-[#aeb7ae] pb-[5px] text-[10px] font-bold"
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             target="_blank"
             rel="noreferrer"
           >
@@ -61,7 +61,7 @@ export default function Introduction() {
         <div className="h-[235px] overflow-hidden bg-gradient-to-br from-[#dbe4d7] to-[#b5c6b3]">
           <img
             className="block h-full w-full object-cover"
-            src="/photo.png"
+            src={`${import.meta.env.BASE_URL}photo.png`}
             alt="Tarkan Zarrouk"
           />
         </div>
