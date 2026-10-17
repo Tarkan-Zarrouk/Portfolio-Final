@@ -60,6 +60,7 @@ export default function App() {
         <Work />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </>
   );
