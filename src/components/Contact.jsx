@@ -11,7 +11,7 @@ export default function Contact() {
           Get in touch
         </h2>
         <p className="mb-[31px] max-w-[400px] text-sm leading-[1.8] text-muted">
-          If you'd like to chat, feel free to shoot me a message throug here!
+          If you'd like to chat, feel free to shoot me a message through here!
         </p>
       </div>
       <div className="pt-2 animate-rise [animation-delay:120ms] max-md:mt-[65px]">
