@@ -1,8 +1,7 @@
 export default function footer() {
     return (
-        // should contain copyright based on Date
-        <footer>
-            &copy; {new Date().getFullYear()}
+        <footer className="text-center py-4">
+            &copy; {new Date().getFullYear()} Tarkan Zarrouk
         </footer>
     )
 }
